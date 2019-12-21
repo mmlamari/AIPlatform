@@ -59,3 +59,41 @@ We hope that this project will be useful for anyone trying to use or demonstrate
 + [ACE Team Blog Homepage](http://aka.ms/ACE-Blog)
 + [ACE Team Blog - Cognitive Search on Audio Files](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Mine-knowledge-from-audio-files-with-Microsoft-AI/ba-p/781957)
 + [KMB - Knowledge Mining Bootcamp](http://aka.ms/kmb)
+
+
+---
+
+# Steps to Deploy the Azure KMA for Document Classification
+
+- Get the complete subscription ID that you'll be using for the deployment. Create a new resource group if necessary.
+
+- Get the complete resource group name that you'll be using for the deployment. Create a new resource group if necessary. 
+
+- Start PowerShell as an Administrator.
+
+- `CD` into the KMA subdirectory where you can see both the `Setup.ps1` and `Deploy.ps1` files.
+
+- Connect to Azure using `COnnect-AzAccount`. You'll be promoted to log in using your credentials. 
+
+- By pass the policy settings using `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` When prompted about using software from an untrusted publisher, proceed with `A` 
+
+  - The entire question is: `Do you want to run software from this untrusted publisher? File C:\Program Files\WindowsPowerShell\Modules\Az.Accounts\1.6.6\Accounts.format.ps1xml is published by CN=Microsoft
+    Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US and is not trusted on your system. Only run scripts from trusted publishers.[V] Never run  [D] Do not run  [R] Run once  [A] Always run  [?] Help (default is "D"):`
+    - Choose `A` to proceed.
+    - If you get an error, you can use `Set-ExecutionPolicy -ExecutionPolicy unrestricted`. When promted about the Execution Policy Change, proceed with `A` The entire question is: `Execution Policy Change
+      The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+      [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):`
+
+- Run the setup file using `.\Setup.ps1`.  
+
+  Choose 'A' to say yes to all when prompted about an untrusted repository. 
+
+  - The entire question is: `Untrusted repository You are installing the modules from an untrusted repository. If you trust this repository, change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from 'PSGallery'? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):`
+
+  - Choose `A` to proceed.
+
+    Run Deployment File by running:
+
+    `.\Deploy.ps1 -uniqueName air-rules -subscriptionId <subscriptionId> -resourceGroup <resourceGroup> -location westus2 -sampleCategory none`
+
+    Along the way, you'll be prompted to log in to your Azure account. 
