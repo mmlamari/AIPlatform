@@ -7,7 +7,7 @@ param (
     [string]$sampleCategory = "none"
 )
 
-Connect-AzAccount
+Connect-AzAccount -subscriptionID $subscriptionId
 
 if($sampleCategory -notin "none", "healthcare", "oilandgas", "retail"){
     Write-Error "The -sampleCategory needs to be one of the followings: healthcare, oilandgas, retail"
