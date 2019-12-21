@@ -94,6 +94,6 @@ We hope that this project will be useful for anyone trying to use or demonstrate
 
     Run Deployment File by running:
 
-    `.\Deploy.ps1 -uniqueName air-rules -subscriptionId <subscriptionId> -resourceGroup <resourceGroup> -location westus2 -sampleCategory none`
+    `.\Deploy.ps1 -uniqueName <Name of POC> -subscriptionId <subscriptionId> -resourceGroup <resourceGroup> -location westus2 -sampleCategory none`
 
     Along the way, you'll be prompted to log in to your Azure account. 
