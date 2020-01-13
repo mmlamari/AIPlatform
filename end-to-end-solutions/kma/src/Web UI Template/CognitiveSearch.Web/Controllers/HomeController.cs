@@ -16,7 +16,7 @@ namespace CognitiveSearch.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Search","Search");
         }
 
         public IActionResult About()

@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azure Cognitive Search Starter</title>
+    <title>AirRules by Envera Consulting</title>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css" />
@@ -55,28 +55,37 @@
     <header>
         <nav class="navbar navbar-bg border-bottom box-shadow mb-3 fixed-top">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo.png" height="35px" id="navbar-img" alt="@AppConfig.Organization.Name logo" title="@AppConfig.Organization.Name Cognitive Search" class="logo-container logo-sgv" asp-append-version="true" />
+                <a class="navbar-brand" asp-area="" asp-controller="Search" asp-action="Search">
+                    <img src="~/images/logo.png" height="35px" id="navbar-img" alt="EnveraConsulting logo" title="EnveraConsulting AirRules Search" class="logo-container logo-sgv" asp-append-version="true" />
                 </a>
                 <ul class="navbar-nav list-group-horizontal">
+
+                    <li class="nav-item pl-5">
+
+                        <a class="nav-link navbar-text" href="https://www.enveraconsulting.com/" target="_blank">Home</a>
+                    </li>
                     <li class="nav-item pl-5">
                         <a class="nav-link navbar-text" asp-area="" asp-controller="Search" asp-action="Search">Search</a>
                     </li>
-                    <li class="nav-item pl-5">
-                        <a id="customize-page" class="nav-link navbar-text" asp-area="" asp-controller="Admin" asp-action="Customize">Customize</a>
+                    <li class="nav-item pl-5" >
+
+                        <a class="nav-link navbar-text" href="https://www.enveraconsulting.com/contact/" target="_blank">Contact</a>
                     </li>
-                    <li class="nav-item pl-5">
-                        <a id="upload-data-page" class="nav-link navbar-text" asp-area="" asp-controller="Admin" asp-action="UploadData">Upload Files</a>
-                    </li>
-                    <li class="nav-item pl-5">
-                        <a class="nav-link navbar-text" asp-area="" asp-controller="Reports" asp-action="Index">Reports</a>
-                    </li>
-                    <li class="nav-item pl-5">
-                        <a class="nav-link navbar-text" asp-area="" asp-controller="Home" asp-action="About">About</a>
-                    </li>
-                    <li class="nav-item pl-5">
-                        <a class="nav-link navbar-text" asp-area="" asp-controller="Home" asp-action="UseOfDatasets">Use of Demo</a>
-                    </li>
+                    @*<li class="nav-item pl-5">
+            <a id="customize-page" class="nav-link navbar-text" asp-area="" asp-controller="Admin" asp-action="Customize">Customize</a>
+        </li>
+        <li class="nav-item pl-5">
+            <a id="upload-data-page" class="nav-link navbar-text" asp-area="" asp-controller="Admin" asp-action="UploadData">Upload Files</a>
+        </li>
+        <li class="nav-item pl-5">
+            <a class="nav-link navbar-text" asp-area="" asp-controller="Reports" asp-action="Index">Reports</a>
+        </li>
+        <li class="nav-item pl-5">
+            <a class="nav-link navbar-text" asp-area="" asp-controller="Home" asp-action="About">About</a>
+        </li>
+        <li class="nav-item pl-5">
+            <a class="nav-link navbar-text" asp-area="" asp-controller="Home" asp-action="UseOfDatasets">Use of Demo</a>
+        </li>*@
                 </ul>
             </div>
         </nav>

@@ -18,7 +18,7 @@
 <main role="main">
     <div id="search-results">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Cognitive Search Results</h1>
+            <h1 class="h2">AirRules Search Results</h1>
             <div id="view-switcher" class="btn-group pr-5" role="radiogroup" aria-label="Select results view">
                 <button type="button" data-view="list" class="btn btn-outline-primary btn-results-view" title="View results as list">
                     <span class="ms-Icon ms-Icon--GroupedList"></span>
@@ -43,10 +43,10 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
-        if (getCookie("showTutorial") !== "false") {
-            var modal = document.getElementById("introModal");
-            modal.style.display = "block";
-        }
+        //if (getCookie("showTutorial") !== "false") {
+        //    var modal = document.getElementById("introModal");
+        //    modal.style.display = "block";
+        //}
 
         $('#btn-search').click(function (e) {
             Search();

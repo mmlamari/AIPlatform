@@ -9,6 +9,7 @@ function GetTagsHTML(result) {
         var i = 0;    
         var name = item.key;
         var dedupedEntities = [];
+        if (typeof result[name]=="string")result[name] = result[name].split(); // to handle string facets
 
         result[name].forEach(function (tagValue, i) {
             if (i <= 3) {
