@@ -50,7 +50,9 @@ function UpdateResults(data, q) {
 
         var id = result.id;
         var name = result.metadata_storage_name.split(".")[0];
-        var path = result.metadata_storage_path + token;
+        var path = result.file_url;
+        var lastupdated = result.last_update;
+        var airdistrict = result.airdistrict;
         var summary = generateSummary(result.content, q);
         var highlightedSummary = highlight(summary, q);
         var tags = GetTagsHTML(result);
@@ -147,7 +149,7 @@ function UpdateResults(data, q) {
                                                 <strong>
                                                     <i class="html-icon ms-Icon ${icon}"></i>${name}
                                                 </strong>
-                                                <small><a href="${path}">Download</a></small>
+                                                <small><a href="${path}">Download</a><span><b> Air District:  ${airdistrict}       Last Updated on ${lastupdated}</b> </span> </small>
                                             </span>
                                             <div class="card-body">
                                                 <p>${highlightedSummary}</p>
